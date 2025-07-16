@@ -42,9 +42,20 @@
             </header>
 
             <div class="our-headquarter">
-                <img class="img-haedquarter" src="" alt="">
-                <img class="img-haedquarter" src="" alt="">
-                <img class="img-haedquarter" src="" alt="">
+                <div class="item">
+                    <img class="img-haedquarter" src="img/klaten.png" alt="Klaten">
+                    <p>Klaten</p>
+                </div>
+                <div class="item">
+                    <img class="img-haedquarter" src="img/solo.png" alt="Solo">
+                    <p>Solo</p>
+                </div>
+                <div class="item">
+                    <img class="img-haedquarter" src="img/sukorharjo.png" alt="Sukoharjo">
+                    <p>Sukoarjo</p>
+                </div>
+
+
             </div>
         </section>
         <hr class="mid2-line">
@@ -54,28 +65,40 @@
                 <h2 class="message-header">Message Us</h2>
             </header>
 
-            <div class="message-banner">
-                <div class="form-message">
-                    <form action="" id="message_us" class="main-form">
-                        <label for="nama">Nama</label><br>
-                        <input type="text" name="nama" id="nama" placeholder="Masukkan nama" required><br><br>
-                        <label for="tanggalLahir">Tanggal Lahir</label><br>
-                        <input type="date" name="tanggallahir" id="tanggallahir" required><br>
-                        <p>Jenis Kelamin</p>
-                        <input type="radio" id="lakiLaki" name="jenisKelamin" value="lakiLaki" checked>
-                        <label for="lakiLaki">Laki-Laki</label>
-                        <input type="radio" id="perempuan" name="jenisKelamin" value="perempuan">
-                        <label for="perempuan">Perempuan</label><br>
-                        <label for="pesan">Pesan</label><br><br>
-                        <textarea name="pesan" id="Pesan"></textarea>
-                    </form>
+            <div class="container">
+                <div class="form-section">
+                    <h2>Kirim Pesan ke Kami</h2>
+                    <div class="form-group">
+                        <label for="nama">Nama</label>
+                        <input type="text" id="nama" placeholder="Nama Anda">
+                    </div>
+                    <div class="form-group">
+                        <label for="tanggalLahir">Tanggal Lahir</label>
+                        <input type="date" id="tanggalLahir" value="2000-01-01">
+                    </div>
+                    <div class="form-group">
+                        <label>Jenis Kelamin</label>
+                        <div class="radio-group">
+                            <input type="radio" id="lakiLaki" name="jenisKelamin" value="Laki-Laki" checked>
+                            <label for="lakiLaki">Laki-Laki</label>
+                            <input type="radio" id="perempuan" name="jenisKelamin" value="Perempuan">
+                            <label for="perempuan">Perempuan</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="pesan">Pesan</label>
+                        <textarea id="pesan" placeholder="Tulis pesan Anda di sini..."></textarea>
+                    </div>
+                    <button type="submit" onclick="displayMessage()">Submit</button>
                 </div>
 
-                <div class="message-output">
-                    <p>Nama : <span id="displayNama"></span></p>
-                    <p>Tanggal Lahir : <span id="displayTanggalLahir"></span></p>
-                    <p>Jenis Kelamin : <span id="displayJenisKelamin"></span></p>
-                    <p>Pesan : <span id="displayPesan"></span></p>
+                <div class="display-section">
+                    <p><strong>Waktu saat ini :</strong> <span id="currentTime"></span></p>
+                    <br>
+                    <p><strong>Nama :</strong> <span id="displayName"></span></p>
+                    <p><strong>Tanggal Lahir :</strong> <span id="displayTanggalLahir"></span></p>
+                    <p><strong>Jenis Kelamin :</strong> <span id="displayJenisKelamin"></span></p>
+                    <p><strong>Pesan :</strong> <span id="displayPesan"></span></p>
                 </div>
             </div>
         </section>
