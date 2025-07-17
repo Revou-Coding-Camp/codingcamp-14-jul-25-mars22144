@@ -7,17 +7,17 @@
     <title>Portofolio</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body>
     <!-- header -->
     <header class="main-header">
         <div class="main-logo"></div>
-
         <nav>
-            <a class="nav-home" href="#home">Home</a>
-            <a href="#profile">Profile</a>
-            <a class="nav-message" href="#message">Message Us</a>
+            <a class="border rounded-[4px] px-[8px] py-[1px] text-decoration" href="#home">Home</a>
+            <a class="border rounded-[4px] px-[8px] py-[1px] text-decoration" href="#profile">Profile</a>
+            <a class="border rounded-[4px] px-[8px] py-[1px] text-decoration" href=" #message">Message Us</a>
         </nav>
     </header>
     <!-- line -->
@@ -26,33 +26,35 @@
     <!-- main content -->
     <main>
         <section id="home">
-            <header>
-                <h1 class="home-header">Hi I'm Fauziadnan, Welcome to my Website</h1>
-            </header>
-
-            <div>
-
-            </div>
+            <div class="main-content">
+                <h2 class="text-center font-bold">Welcome to Here</h2>
+                <header>
+                    <h1 class="text-center">Welcome to My Portfolio</h1>
+                </header>
+                <div class="banner"></div>
+                <p class="home-subheader text-center">Hello! My name is Fauziadnan.</p>
+                <p class="home-subheader text-center">This is my portfolio website.</p>
+                <p class="home-subheader text-center">Feel free to explore and get in touch!</p </div>
         </section>
         <hr class="mid-line">
 
         <section id="profile">
             <header>
-                <h2 class="profile-header">Our Headquarter</h2>
+                <h2 class="profile-header text-center text">Our Headquarter</h2>
             </header>
 
             <div class="our-headquarter">
                 <div class="item">
                     <img class="img-haedquarter" src="img/klaten.png" alt="Klaten">
-                    <p>Klaten</p>
+                    <p class="text-center">Klaten</p>
                 </div>
                 <div class="item">
                     <img class="img-haedquarter" src="img/solo.png" alt="Solo">
-                    <p>Solo</p>
+                    <p class="text-center">Solo</p>
                 </div>
                 <div class="item">
                     <img class="img-haedquarter" src="img/sukorharjo.png" alt="Sukoharjo">
-                    <p>Sukoarjo</p>
+                    <p class="text-center">Sukoharjo</p>
                 </div>
 
 
@@ -60,27 +62,28 @@
         </section>
         <hr class="mid2-line">
 
+        <!-- message -->
         <section id="message">
             <header>
-                <h2 class="message-header">Message Us</h2>
+                <h2 class="message-header text-center">Message Us</h2>
+                <h4 class="text-center text-2xl">Feel free to contact me</h4>
             </header>
-            <hr class="bot-line">
 
+            <!-- form -->
             <div class="container">
                 <form class="form-section">
-                    <h2>Kirim Pesan ke Kami</h2>
                     <div class="form-group">
                         <label for="nama">Nama</label>
                         <input type="text" id="nama" placeholder="Nama Anda" required>
                     </div>
                     <div class="form-group">
                         <label for="tanggalLahir">Tanggal Lahir</label>
-                        <input type="date" id="tanggalLahir" value="2000-01-01" required>
+                        <input type="date" id="tanggalLahir" required>
                     </div>
                     <div class="form-group">
                         <label>Jenis Kelamin</label>
                         <div class="radio-group">
-                            <input type="radio" id="lakiLaki" name="jenisKelamin" value="Laki-Laki" checked>
+                            <input type="radio" id="lakiLaki" name="jenisKelamin" value="Laki-Laki">
                             <label for="lakiLaki">Laki-Laki</label>
                             <input type="radio" id="perempuan" name="jenisKelamin" value="Perempuan">
                             <label for="perempuan">Perempuan</label>
@@ -93,6 +96,7 @@
                     <button type="submit" onclick="displayMessage()">Submit</button>
                 </form>
 
+                <!-- display output -->
                 <div class="display-section">
                     <p><strong>Waktu saat ini :</strong> <span id="currentTime"></span></p>
                     <br>

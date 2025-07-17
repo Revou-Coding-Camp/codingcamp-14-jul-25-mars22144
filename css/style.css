@@ -5,10 +5,68 @@ html {
 }
 
 body {
-    font-family: Montserrat;
+    font-family: sans-serif;
     max-width: 100vw;
     max-height: 100vh;
     margin: 0;
+}
+
+.banner{
+    width: 100%;
+    height: 500px;
+    background-image: url(https://picsum.photos/1000);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px 10px 20px;
+  background-color: #FF7D29;
+}
+
+#home{
+    background-color: #FFBF78;
+}
+
+#profile {
+    background-color: #FFEEA9;
+}
+
+#message {
+    background-color: #FEFFD2;
+}
+
+.main-logo {
+  width: 50px;
+  height: 50px;
+  background-image: url(https://picsum.photos/100);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+nav {
+  display: flex;
+  border-radius: 4px;
+  justify-content: flex-end;
+  padding: 5px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px;
+  border: 2px solid black;
+  transition: color 0.3s ease-in-out;
+  margin: -1px;
+}
+
+nav a:hover {
+  color: #00000075;
 }
 
 .our-headquarter {
@@ -31,11 +89,10 @@ body {
 
 .container {
     display: flex;
+    margin: auto;
     gap: 40px;
-    background-color: #fff;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .form-section {
@@ -46,9 +103,8 @@ body {
 .display-section {
     flex: 1;
     min-width: 400px;
-    border: 1px solid #ccc;
+    border: 1px solid black;
     padding: 20px;
-    background-color: #f9f9f9;
     border-radius: 5px;
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
 }
@@ -57,7 +113,7 @@ h2 {
     margin-top: 0;
     color: #333;
     font-size: 24px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .form-group {
@@ -80,7 +136,7 @@ h2 {
 .form-group textarea {
     flex: 1;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid black;
     border-radius: 4px;
     font-size: 15px;
     box-sizing: border-box;
@@ -114,8 +170,8 @@ h2 {
 }
 
 button {
-    background-color: #e0e0e0;
-    border: 1px solid #ccc;
+    background-color: #FFBF78;
+    border: none;
     padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
@@ -123,10 +179,11 @@ button {
     width: 100%;
     box-sizing: border-box;
     margin-top: 20px;
+    transition: background-color 0.3s ease-in-out;
 }
 
 button:hover {
-    background-color: #d0d0d0;
+    background-color: #FFEEA9;
 }
 
 .display-section p {
@@ -137,4 +194,106 @@ button:hover {
 
 .display-section p strong {
     color: #000;
+}
+
+/* responsive */
+@media (max-width: 768px){
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-section, .display-section {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .form-group label {
+        text-align: left;
+        width: auto;
+    }
+
+    .radio-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .radio-group label {
+        margin-bottom: 5px;
+    }
+    .radio-group input[type="radio"] {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+    .radio-group input[type="radio"]:last-child {
+        margin-bottom: 0;
+    }
+    button {
+        width: auto;
+        padding: 10px 15px;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="date"],
+    .form-group textarea {
+        width: 100%;
+    }
+    .form-group input[type="date"] {
+        width: auto;
+    }
+    .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .form-group label {
+        margin-bottom: 5px;
+    }
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .form-section, .display-section {
+        width: 48%;
+    }
+    .form-group {
+        flex-direction: row;
+        align-items: center;
+    }
+    .form-group label {
+        width: 150px;
+        text-align: right;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="date"],
+    .form-group textarea {
+        width: calc(100% - 160px);
+    }
+    .radio-group {
+        flex-direction: row;
+        align-items: center;
+    }
+    .radio-group label {
+        margin-right: 10px;
+    }
+    .radio-group input[type="radio"] {
+        margin-right: 0px;
+    }
+    button {
+        width: auto;
+        padding: 10px 20px;
+    }
+    .form-group input[type="date"] {
+        width: auto;
+    }
+    .form-group {
+        flex-direction: row;
+        align-items: center;
+    }
+    .form-group label {
+        margin-right: 15px;
+        text-align: right;
+    }
 }
